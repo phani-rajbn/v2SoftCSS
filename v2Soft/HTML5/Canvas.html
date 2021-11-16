@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	 <canvas id="board" width="200px" height="200px" style="border: 2px solid blue;">
+	 </canvas>
+	 <svg width="500" height="500">
+	 	<circle cx="150" cy="250" r="40" stroke="green" stroke-width="4" fill="red"/>
+	 </svg>
+	 <script type="text/javascript">
+	 	let cnv = document.getElementById("board")
+	 	let ctx = cnv.getContext("2d");
+	 	ctx.beginPath();
+	 	ctx.arc(95,95, 40, 0, 2 * Math.PI);
+	 	ctx.stroke();
+
+	 	ctx.moveTo(0,0);
+	 	ctx.lineTo(200, 200);
+	 	ctx.stroke();
+	 </script>
+</body>
+</html>

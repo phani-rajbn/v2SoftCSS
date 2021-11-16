@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="Helpers.js"></script>
+	<script>
+		let worker = new Worker("worker.js")//Creates a new Worker object(thread) and executes the Js content. 
+		worker.onmessage = function(event){//onmessage is the event listener to the postmessage api. 
+			let value = event.data;//event object is the one that is interacting with the HTML and web worker. 
+			$("result").innerHTML += `${value}<br/>`;
+		}
+		function doClick() {
+			worker.terminate();//Stops the web worker from execution. 
+			worker = undefined;
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<h2>Web Workers</h2>
+		<button onclick="doClick()">Click Me</button>
+		<div id="result"></div>
+	</div>
+</body>
+</html>

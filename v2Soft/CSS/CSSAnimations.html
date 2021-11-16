@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#myDiv{
+			width: 300px;
+			height: 200px;
+			background-color: green;
+			-webkit-animation: custom 5s infinite ;
+			animation: test 5s, fadeIn 5s;
+		}
+
+		@-webkit-keyframes custom {
+			from { background-color: green; }
+			to { background-color: blue; }
+		}
+		@keyframes custom{
+			from { background-color: green; }
+			to { background-color: blue; }	
+		}
+		@keyframes test{
+			0% {background-color: red;}
+			25% {background-color: green;}
+			50% {background-color: blue;}
+			75% {background-color: yellow;}
+			100% {background-color: orange;}
+		}
+
+		@keyframes fadeIn{
+			from{ opacity: 0; }
+			to{ opacity: 1; }
+		}
+	</style>
+</head>
+<body>
+	<h1>CSS Animations</h1>
+	<div id="myDiv">See the change</div>
+	<p>KeyFrames are the important part of any animation in CSS. It defines how the animations look at specific mements of the transition. Animation duration is required attribute a default duration is 0</p>
+</body>
+</html>

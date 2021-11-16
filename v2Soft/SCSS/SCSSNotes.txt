@@ -1,0 +1,23 @@
+SCSS is a CSS pre-processor. It  is an extension of CSS used to add features using a simple programming language. It allows U to use variables, functions, nested rules to create CSS which is helpfull for better performance and management of CSS in the futuristic web apps. 
+
+With SCSS U can:
+Get more power than CSS 
+Comes with its own syntax and complies to readable CSS.
+SCSS comes with transpiler(A Simplified compiler that converts one programming syntax code to another programming syntax). SCSS comes with opensource pre processor that is interpreted into CSS. 
+It provides usefull functions to manipulate the colors and values within UR code and helpful in managing the code for better reusability.
+It is easy, short and clean in a programming construct. It comes with its own syntax which will be transpiled. 
+It helps to create reusable methods, logical statements and many more to make the CSS work efficiently. 
+Responsive web design becomes more easier and organized with SCSS.
+
+Issues: Developers need to spend more time to learn these new features that are available in SCSS and use it. 
+With SCSS, the way of interacting with the elements of the html doc will change which many browsers dont support it yet. Inspecting the HTML elements thru browser inspectors are difficult if U use SCSS. 
+
+SASS and SCSS are 2 similar terms but written in different styles. SCSS is the latest one and is found to be better than SASS. SASS use Ruby syntax and a very strict indentation 
+SCSS which is new comes closer to CSS and will be very code friendly. SCSS is called Sassy CSS. 
+U need to run the SCSS commands from the Cmd Prompt to generate the CSS required. 
+
+U need to install Ruby for executing SASS files. 
+
+Variables:
+$ is used to declare variables in SCSS. 
+Variables declared are global and can be accessed by any block within the SCSS file. 

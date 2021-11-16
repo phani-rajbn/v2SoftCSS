@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.floatDiv{
+			float: left;
+			width: 10%;
+			height: 250px;
+			background-color: lightblue;
+			margin: 5px;
+		}
+		.floatRight{
+			float: right;
+			width: 10%;
+			height: 250px;
+			background-color: lightblue;
+			margin: 5px;
+		}
+		.pStyle{
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="floatDiv">
+		Some content that will have some big data in it. It is taken out of the normal flow of the Document and is moved towards left-right until it reaches the edge of its container. It could also meet another floating element in the same line. 
+	</div>
+	<div class="floatDiv">
+		This part of the page is dependent on the previous content that we wish to place. 
+	</div>
+	<p class="pStyle"> Any other content can be placed here so that it comes out like a Left-Center-Right content 
+	<div class="floatRight">
+		This part of the page is dependent on the previous content that we wish to place. 
+	</div>
+</body>
+</html>

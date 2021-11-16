@@ -1,0 +1,45 @@
+$font-color : indianred;
+$font-size: 28pt;
+$bkColor: orange;
+$text : "apple";
+
+@mixin importantInfo{
+	color: pink;
+	font-size : 30pt;
+	font-weight: bold;
+	border: 2px solid blue;
+}
+
+$content : quote("Welcome to training on HTML5");
+$plaintext : to-lower-case("Apple IN THE TREE");
+$titletext : to-upper-case("sample Text in the example");
+
+@debug $content;
+@debug $plaintext;
+@debug $titletext;
+
+h2{
+	color: if( 1 + 1 == 2, green, red);
+}
+
+p{
+	@if $text == "apple"{
+		color: blue;
+	}@else-if $text == "apple123"{
+	   color: red;
+	}
+}
+
+@for $i from 1 through 4{
+	.p#{$i} { padding : $i * 10px; }
+}
+
+@each $color in red, green, blue, white{
+	.p_#{$color}{
+			background-color : #{$color};
+			@if #{$color} == "blue"{
+				color: white;	
+			}
+	}
+}
+//mailto:phani-blrtraining@gmail.com

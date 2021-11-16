@@ -1,0 +1,70 @@
+HTML 5 features:
+Geolocation in HTML
+Using Drag-Drop features of HTML5
+Web Storage
+Web Workers
+offLine apps in HTML5
+Web Forms 2.0
+
+Transition from web browser centric to the multiple device centric. HTML5 and CSS3 allow most devices to properly render the code regardless of the size of the divice's screen. "One size, fit all" page development. 
+
+Web Development Trifecta
+Futuristic web app and web designs are ruled by 3 technologies: HTML, CSS and JS. Used together, these technologies create Web pages that easily adapt to smartphones, tablets, gaming devices and smart tvs and traditional Computers.  
+HTML 3.2 and HTML 4 along XHTML was very popular during the initial stages of Web App Development. HTML 4 allowed to use CSS and was released in 1999. The flavor was called as HTML 4.01. Transitional- allowed developers to insert the fommatting using either CSS or traditional layout instructions in the form of attributes of the elements. A new way of seperation of the presentation and content. The pages were allowed to use framesets which allowed pages inside another to create seperate panes for the browser windows. 
+XML also became popular in the industry. XML was incorporated into HTML which allowed html to have strict syntax rules of xml with the existing html 4.01 tags. 
+XHTML Doctype was mandatory. 
+
+Apple, Google and MS started to provide their own set of tags that suited their architectural requirements. They created a paralell consortium to the future of HTML 5. 
+HTML 5 was planned to provide modrenized design techniques for the internet while requiring minimal or less plugins. Technically the need for the plugins were to be removed. 
+1. Standardize the way media content is rendered(audio and video)
+2. Ways to enable Drag-Drop capability for the web pages without using 3rd party add-ons. 
+3. Use native tools within the web pages such as download progress indicators, image captioning options and form validations. 
+4. With usage of google maps and apis, developers could retrive the geo location for a web user. HTML promoted using Geolocation thru' Global positioning system(GPS) of a mobile device which allows Web APIs to be provided based on the client's location.
+5. Provide developers with a native option for offline storages and enable apps to run as expected even with limited or without network technologies. 
+6. Store some info in the client browser using local Storage to store the data from the JS code instead of any server side coding. 
+
+HTML 5 has 2 kinds of storages in it.
+localStorage: It is used to store the data in the client side without much dependency on server side state management techniques. It does not have any expiration time, so the data in the local storage exists always till the user deletes it. 
+SessionStorage: It is simlar to the local storage but the data will exist till the current tabl is open. This makes the data that is required for a brief period of time to be stored using session. Ofcourse the data is on the client machine and will be specific to the user of the App.
+The data is stored internally like a dictionary. In the form of key-value pairs and the data is stored as value and a key would be assigned to it as a string and U refer the data with the key name
+
+HTML 5 has a feature of storing the complete state of the application in a cache so that it can be viewed offline. 
+Most of the cases in Web Apps, the app works only if U R online. With App Cache mechanism, U can allow browsers to automatically save the HTML file and all the resources that U need to display in the local machine ensuring that the browser can still access the web page and its resources without an internet connection. 
+Application cache helps in the following ways:
+1. Improved Performance as the resources are loaded directly from the user's machine rather than the remote server
+2. Offline Browsing: Users can use the application even if they are offline or any kind of unexpected network interuptions.
+3. Reduce the HTTP requests and server load at critial scenarios where there would be a huge network traffic.  
+
+Day 3:
+CSS and its features. 
+Start with CSS layouts. 
+Layouts allow us to take elements contained in a web page and control them on where they are supposed to be placed, positioned relative to various factors like Parent Container, siblings, other elements around them, Viewport of the Window that is displayed. 
+There are various kinds of layouts available:
+Normal flow: The HTML content will be displayed in the order in which it appears in the source code with elements stacked upon one another. Elements that appear one below the other are called block elements, and elements that appear one beside the other are called as inline elements. 
+The Display property is the one that is used to make the elements display in the manner we want it to be presented. 
+The float property can be used in the Normal Flow  to place the elements on the left-right of its container allowing the text and other inline elements to wrap around it. The element will be removed from the normal flow of the page and will place the content as if its on top of the Normal Flow. 
+Position property is also used to alter the location of the content in the normal flow of the html document. It tells about the method of positioning for an element in relation with its surrounding content or elements.
+Fixed, Static, Relative, Absolute and Sticky. 
+Fixed: When a content is placed as fixed, the element will be fixed to the viewport of the device. In this case, it will remain at the same position even if we scroll the page. We can set the position of the element using top, right, left or bottom. 
+Relative: An element with a position relative is placed relatively with the other elements which are sitting on top of it. If we set its top, left, other elements will not fill the gap left by this element. 
+Absolute: Elements with absolute position are placed relative to their container. It is taken out of the Flow and the other elements will place their content as if the Absolute element does not exist. It will be based on its parent element. 
+Sticky: It is hybrid of relative and absolute based on the position it is placed. If the element is placed in the middle of the doc, when scrolled, the element moves up until it reaches the top. Once it touches the top, it will be fixed and will not scroll further. It basically sticks to the direction once it reaches it. 
+Grid
+FlexBox: This is a shortname for Flexible Box Layout where the contnts will be layed in one dimension: either as rows or columns. By default it would be columns. 
+If UR content has to be maintained in the fluid layout:
+Width is in percentage. 
+Text should scroll down when Zoom in-out
+Dependent on Screen Size.
+Grid Layout: Is a 2 dimensional layout where u can place UR elements in both rows and columns together. U will divide the page layout into rows and Columns. U will split the layout into columns and rows using grid layout module. This is one of the easiest way of designing responsive pages.  
+
+the 2 major layouts used in the CSS are : Flex and Grid. 
+Grids are set in 2 ways simulteneously as rows and columns and Flexs are Single dimensional where u can set the elements are either rows or columns but not both. 
+Grid is designed for big scale layouts while the flex are better for small scale ones. 
+Grid is layout oriented but flex are content-oriented. If U R not sure of the content of the website, U should choose Grid.
+There is no std way of designing layouts, if U want to have layouts for both small scale and large scale, create flex and add grid inside it. 
+Use fractions for dividing the columns. 1 fr represents one fraction of the available space in the grid container. frs give more flexible size grid rows and columns. 
+
+CSS Media queries and breakpoints are created in CSS to create responisve designs based on the different screens that it is going to be displayed upon. They are basically used to develop responsive media designs. It allows to control the way websites look in different sizes.
+
+---------------------------------------------------------
+CSS Animation propery is used for making elements transition from one set of properties to another. To animate CSS property, we use Keyframes that specify the begining and end states for the animation

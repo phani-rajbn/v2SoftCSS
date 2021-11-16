@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Transformation Demo</title>
+	<style type="text/css">
+		div{
+			width: 80px;
+			height: 80px;
+			background-color: green;	
+		}
+		.test{
+			background-color: pink;
+			color: white;
+			border-radius: 10px;
+			transform: translate(10px, 2px);
+		}
+		.example{
+			transform: perspective(500px) translate3d(50px, 10px, 3px);
+			background-color: red;
+		}
+
+		.rolling{
+			display: inline-block;
+			animation:  roll 5s infinite;
+		}
+		@keyframes roll{
+			100% {
+			transform: rotateZ(135deg) }
+		}	
+	</style>
+</head>
+<body>
+<div>Normal</div>
+<div class="example">Translated Div</div>
+<div>Normal</div>
+<div class="rolling">
+	<h2>Rotate Property</h2>
+	<p>rotate property of the transform is used for making elements move around a fixed point which is by default the center of the element itself. 
+</div>
+</body>
+</html>

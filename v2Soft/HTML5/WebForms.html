@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>New Form Features</title>
+	<script src="Helpers.js"></script>
+	<script type="text/javascript">
+		function fetchData(ev){
+			ev.preventDefault();//will not submit the form and will help in retaining the values which can be read...
+			$("display").innerHTML = $("txtName").value;
+		}
+	</script>
+</head>
+<body>
+	<h1>Welcome to Registration Page</h1>
+	<h3>List of input types:</h3>
+	<li>button</li>
+	<li>checkbox</li>
+	<li>range</li>
+	<li>time</li>
+	<li>date</li>
+	<li>tel</li>
+	<li>image</li>
+	<li>email</li>
+	<li>color</li>
+	<li>file</li>
+	<li>hidden</li>
+	<li>password</li>
+	<li>reset</li>
+	<li>url</li>
+	<form>
+		<p><input required type="text" id="txtName" placeholder="Enter the Name"></p>
+		<p><input type="text" id="txtAddress"  placeholder="Enter the Address"></p>
+		<p><input type="Email" id="txtEmail" placeholder="Enter the EMail" required></p>
+		<p><input type="text" id="txtSalary"  placeholder="Enter the Salary"></p>
+		<p><input type="number" id="txtAge" placeholder="Enter the Age" min="18" max="45" required></p>
+		<p><input type="range" id="txtRange" placeholder="Rate the Website" min="1" max="10" step="1" required></p>
+		<button id="btnSave" type="submit" onclick="fetchData(event)">Save changes</button>
+		<p id="display"></p>
+	</form>
+</body>
+</html>

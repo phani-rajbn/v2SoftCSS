@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html manifest="demo.appcache">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Offline Web Page</title>
+	<script src="Helpers.js"></script>
+
+</head>
+<body>
+	<div>
+		<h2>Example of App Cache</h2>
+		<hr>
+		<p>A simple demo on a HTTP CACHE to be stored in the App Folder.</p>
+	</div>
+	<hr>
+	<div>
+		<i>The App status:<span id="spStatus"></span></i>
+	</div>
+	<script type="text/javascript">
+		debugger;
+		$("spStatus").innerHTML = window.applicationCache.status;
+	</script>
+</body>
+</html>

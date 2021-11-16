@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fluid Layout</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+		}
+		.wrap{
+			width: 80%;
+			margin: auto;
+		}
+		.header{
+			padding: 10px;
+			background: lightcyan;
+		}
+		.nav{
+			height: 45px;
+			background: grey;
+		}
+		.container{
+			background-color: white;
+		}
+		.left{
+			width: 20%;
+			background: hotpink;
+			float: left;
+		}
+		.section{
+			width: 80%;
+			background: yellow;
+			float: left;
+		}
+		.footer{
+			padding: 10px;
+			background: green;
+		}
+		.clear{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="header"><h1>Header Template</h1></div>
+		<div class="nav">Nav Template</div>
+		<div class="container">
+			<div class="left">Left section</div>
+			<div class="section">Right section</div>
+			<div class="clear"></div>
+		</div>
+		<div class="footer">Footer Template</div>
+	</div>
+</body>
+</html>

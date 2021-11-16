@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Geo Location of the Website</title>
+	<script src = "./Helpers.js"></script>
+	<script type="text/javascript">
+		function getLocation() {
+			navigator.geolocation.getCurrentPosition(showLoc, errorCallBack);
+		}
+
+		function errorCallBack(errInfo){
+			if(errInfo.code == 1)
+				$("display").innerHTML = "You have not given permissions to view your location"
+			else if(errInfo.code == 2)
+				$("display").innerHTML = "UR networl is down or the positioning service canot be accessed";
+			else{
+				$("display").innerHTML = "Geolocation failed due to unknown error"
+			}
+		}
+		function showLoc(pos){
+			let data = `Latitude: ${pos.coords.latitude} <br/> Longitude: ${pos.coords.longitude}`;
+			$("display").innerHTML = data;
+			$("imgPic").src = "";
+		}
+
+		function init(){
+			$clickHandler("btnLocate", getLocation);
+		}
+		window.addEventListener("load", init)
+	</script>
+</head>
+<body>
+	<h1>Geolocation in HTML</h1>
+	<p>Geolocation of the device is based on permissions given by the device, if the device is not providing the relevant permission, the HTML Navigator component will not get the coordinates. 
+	<button id="btnLocate">Locate Me!!!</button>
+	<img id="imgPic"  width="200px" height="200px"/>
+	<p id="display">
+		
+	</p>
+</body>
+</html>

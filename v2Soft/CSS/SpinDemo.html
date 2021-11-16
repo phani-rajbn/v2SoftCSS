@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		img{
+			position: absolute;
+			animation-delay: 1s;
+			animation-duration: 16s;
+			animation-name: spin;
+			animation-iteration-count: infinite;/*No of times of infinite for all the time*/
+			/*animation-direction: reverse;*/
+			animation-direction: alternate;
+		}
+		@keyframes spin{
+			/*100% { transform :rotate(360deg); }*/
+			from { transform: translateX(10px); }
+			to { transform: translateX(200px); }
+		}
+	</style>
+</head>
+<body>
+	<img src="../html5/Apple.jfif"/>
+</body>
+</html>

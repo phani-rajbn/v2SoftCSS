@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shadow effects in CSS</title>
+	<style type="text/css">
+		div{
+			width: 150px;
+			height: 53px;
+			padding: 30px;
+			background-color: indianred;
+			/*box-shadow: 5px 5px;*/
+			box-shadow: inset 0px 0px 20px black;
+		}
+		img{
+			box-shadow:0px 0px 50px blue;
+		}
+		h1{
+			text-align: center;
+			text-shadow: 3px 2px red;
+		}
+	</style>
+</head>
+<body>
+	<h1>The box shawdow Program</h1>
+	<p>Use shawdow effects on images and playcards that are required in ur UI
+	<div>This is a simple element with box shawdow</div>
+	<div>
+		<img src="../html5/Apple.jfif"/>
+	</div>
+	<p>The values passed to the box shawdow are as follows:</p>
+	<ol>
+		<li>Horizontal offset</li>
+		<li>Vertical offset</li>
+		<li>Optional blur</li>
+		<li>Color of the shawdow</li>
+		<li>Optional inset</li>
+	</ol>
+</body>
+</html>

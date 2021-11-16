@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.tooltip{/*Container for the tool tip*/
+			position: relative;
+			display: inline-block;
+		}
+
+		.tooltip .tooltipText{
+			/*visibility: hidden;*/
+			width: 100px;
+			background-color: lightgreen;
+			color: black;
+			text-align: center;
+			padding: 10px;
+			border-radius: 10px;
+			position: absolute;
+			z-index: 1;
+			opacity: 0;
+			transition: opacity 3s;
+		}
+
+		.tooltip-right{
+			top: -5px;
+			left: 125%;
+		}
+
+		.tooltip:hover .tooltipText{
+			/*visibility: visible;*/
+			opacity: 1;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="tooltip">
+		<p>Hover over me!!!!</p>
+		<span class="tooltipText tooltip-right">I will display</span>
+	</div>
+</body>
+</html>

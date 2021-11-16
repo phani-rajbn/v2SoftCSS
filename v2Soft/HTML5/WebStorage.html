@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Storing data using HTML5</title>
+	<script src="Helpers.js"></script>
+	<script type="text/javascript">
+		let listOfNames = []
+		function readData() {
+			if(typeof Storage !== "undefined"){
+				if(localStorage.getItem("allNames") !== "undefined"){
+					listOfNames = JSON.parse(localStorage.getItem("allNames"));
+					$("data").innerHTML = "";
+					for (const item of listOfNames){
+							$("data").innerHTML += `<li>${item}</li>`;
+					}
+					}else{
+						alert("Data is not stored in our device")
+					}	
+			}else{
+				alert("HTML5 is not supported in UR browser, move to Chrome!")
+			}
+		}
+		window.addEventListener("load", function(){
+			$clickHandler("btnClick", function(){
+				if(typeof Storage !== "undefined"){
+					let name = $("txtName").value;
+					listOfNames.push(name)
+					localStorage.setItem("allNames", JSON.stringify(listOfNames));
+					$("data").innerHTML = `Welcome to HTML Mr.${name}`;
+				}else{
+					alert("HTML5 is not supported in UR browser, move to Chrome!")
+				}
+			})
+		});
+		function onSessionSave() {
+			sessionStorage.setItem("Status", $("txtSession").value);
+			alert("UR Current status has been updated")
+			if(sessionStorage.getItem("Status") !== "undefined")
+				$("spStatus").innerHTML = sessionStorage.getItem("Status");
+			else
+				$("spStatus").innerHTML = "Unknown"
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<h2>Local Storage Example</h2>
+		<input id="txtName" type="name" placeholder="Enter UR Name please!">
+		<button id="btnClick">Save Data</button>
+		<button onclick="readData()">Read Data</button>
+		<div id="data">
+
+		</div>
+	</div>
+	<div>
+		<h2>Session storage example</h2>
+		<input id="txtSession" type="name" placeholder="Enter UR Current Status!">
+		<button onclick="onSessionSave()">Save UR Status</button>
+		<hr>
+		<div>
+			<i>UR Status:<span id="spStatus"/></i>
+		</div>
+	</div>
+</body>
+</html>

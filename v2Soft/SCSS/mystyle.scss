@@ -1,0 +1,76 @@
+@import "myColors";	
+
+$font-name : Helvetica, sabs-serif;
+$primary-color: green;
+/*$bkColor: lightgreen;*/
+
+body{
+	font: 100% $font-name;
+	color: $font-color;
+	background-color: $bkColor;
+}
+
+h1{
+    $bkColor: whitesmoke; /*localvariable scoped to h1 block only*/
+    background-color: $bkColor;/*!global is a SASS Syntax of telling the variable to be associated with global declaration and will reflect on all the locations of the variables*/
+	color: #AF80ED;
+}
+
+.container{
+	width : 100%;
+	background-color: $bkColor;
+}
+
+article{
+	float: left;
+	width : 400px / 960px * 100%;
+	text: {
+	align: center;
+	transform : uppercase;
+	overflow : hidden;
+}
+}
+
+
+aside{
+	float: right;
+	width : 400px  / 960px * 100%
+}
+
+nav{
+	ul{
+		margin: 0;
+		padding: 5px;
+
+		li{
+			display: inline-block;
+			padding: 10px;
+			text-align: center;
+		}
+	}
+}
+
+.test{
+	@include importantInfo;
+}
+
+.basic-button {
+	text-align: center;
+	font-size :20pt;
+	color: grey;
+	padding: 10px;
+	margin: 10px;
+	border-radius : 10px;
+	border : 2px solid blue;
+}
+
+.info-button{
+	@extend .basic-button;	
+	background-color: blue;
+}
+
+.danger-button {
+	@extend .basic-button;
+	background-color: red;
+	color: white;
+}
